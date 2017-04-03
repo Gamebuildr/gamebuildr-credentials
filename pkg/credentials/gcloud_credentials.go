@@ -55,7 +55,7 @@ func (gcloud GcloudCredentials) decodeBase64Key() ([]byte, error) {
 
 // Gcloud Credential File Helpers
 func (json GcloudJSONCredentials) createJSON(path string) (*os.File, error) {
-	file, err := os.OpenFile(path, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0640)
+	file, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE, 0640)
 	if err != nil {
 		return nil, err
 	}
